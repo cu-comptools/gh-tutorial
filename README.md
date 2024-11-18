@@ -7,7 +7,7 @@
 3. Create a local copy of your fork: in the terminal, `git clone git@github.com:<your username>/<name of forked repo> <path-to-your-local-repo>`. The second argument in that command is the path to where you want your local copy of the repo to live on your computer.
 4. Now you have a local copy of this repo! Make some changes. Correct your name in the "students.txt" file (on your machine, not on GitHub).
 5. Add the file to the upcoming commit from the terminal: `git add students.txt`
-6. Add a useful message that summarizes your changes: `git commit -m "<summary>"
+6. Add a useful message that summarizes your changes: `git commit -m "<summary>"`
 7. Push your changes from your local environment to your fork on GitHub: `git push [--set-upstream ...]`
 8. Create a pull request to the original repository (that you forked). We will review and merge them.
 
