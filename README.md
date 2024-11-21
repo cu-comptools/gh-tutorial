@@ -11,8 +11,6 @@
 | `rm <filename>` | Deletes a file. Use with the `-r` option to remove a directory (stands for recursive, be careful with it!) |
 | `vim <filename>` | Opens a file with `vim`, a basic but powerful text editor. Careful though, `vim` commands are not obvious (see below). | 
 
-
-
 | Git command  | What it does |
 | -------- | ------- |
 | `man git` | *Super useful* -- shows you the available commands in git. If you do `man git <command>`, it shows you the manual for that specific command. |
@@ -29,6 +27,8 @@
 
 | vim command | What it does |
 | -------- | ------- |
+| `:help` | The most important command: shows you all vim commands. `:help <command>` helps with a specific one. |
+| `vimtutor` | This is to be exectured _from the command line_, not from vim. It's a 30-minute tutorial on the basics of vim. |
 | `<esc>` | Switch to edit mode (default) |
 | `i` | Enter insert mode (where you can type text) | 
 | `:q` | Edit mode command that quits. `:q!` force quits without saving. |
@@ -56,8 +56,4 @@
 5. When pushing, git will ask you to specify which remote you want to push to, with the `git push --set-upstream origin quadfix-<your-name>` command. This specifies that you want your repository on GitHub (the remote called "origin") to have a new branch with the same name as your local branch.
 6. Submit a pull request to the `main` branch. We'll review and merge later.
 
-## 3. Merge conflicts
 
-## 4. Issues
-
-## 5. Git commands cheat sheet
