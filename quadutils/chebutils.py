@@ -23,7 +23,7 @@ def chebD(n):
     if n == 0:
         x = 1; D = 0; w = 0
     else:
-        a = np.linspace(0.0, 2*np.pi, n+1)
+        a = np.linspace(0.0, np.pi, n+1)
         x = np.cos(a)
         b = np.ones_like(x)
         b[0] = 2; b[-1] = 2
