@@ -4,7 +4,7 @@ def quadroots(a, b, c):
     """
     Calculates the roots of the quadratic equation 0 = a*x^2 + b*x + c, and
     returns them as a tuple. If a root is repeated, the elements of the tuple
-    will be identical.
+    will be identical. hello!
     
     Parameters
     ----------
