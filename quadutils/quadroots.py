@@ -6,7 +6,7 @@ def quadroots(a, b, c):
     returns them as a tuple. If a root is repeated, the elements of the tuple
     will be identical.
     
-    Parameters
+
     ----------
     a: float
         Coefficient of x^2 in the input equation.
@@ -21,6 +21,7 @@ def quadroots(a, b, c):
         Roots of the equation.
     """
 
-    x1 = (-b + np.sqrt(b*2 - 4*a*c))/2*a
-    x2 = (-b - np.sqrt(b*2 - 4*a*c))/2*a
+    x1 = (-b + np.sqrt(b**2 - 4*a*c))/(2*a)
+    x2 = (-b - np.sqrt(b**2 - 4*a*c))/(2*a)
     return (x1, x2)
+
