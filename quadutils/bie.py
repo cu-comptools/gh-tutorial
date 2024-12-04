@@ -10,18 +10,20 @@ def Phi(x, y, k = 0.0):
     x: np.array<float>
         Can have shape (2, n) or (2,). In the latter case, it'll be converted
         to (2, 1).
-        What is this variable?
-    y: ?
+        These are the source nodes.
+    y: np.array<float>
         Can have shape (2, m) or (2,). In the latter case, it'll be converted
         to (2, 1).
-        What is this variable?       
+        These are the target nodes.      
     k: float, optional
-        Default k = 0. What is this variable?
+        Default k = 0.
+        This is the wavenumber.
 
     Returns
     -------
-    phi: ? 
-        What's this variable? What's its shape?
+    phi: np.array<float>
+        Has shape (n, m). This the fundamental solution for each source and
+        target node pair.
     """
     # Reshape input vectors if given in the shape (2,). Skip if (2, n).
     if x.ndim < 2: 
