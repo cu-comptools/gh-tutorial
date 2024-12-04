@@ -14,6 +14,7 @@ def test_quadroots_1():
 def test_chebD_1():
     n = 16
     D, x = ch.chebD(n) 
+    print(x)
     f = lambda x: x**2 # Test function should be differentiated exactly
     interval = np.array([0, 0.5])
     h = interval[1] - interval[0]
@@ -22,3 +23,6 @@ def test_chebD_1():
     df_num = 2/h*D@f(x_scaled)
     df_err = max(np.abs(df_ana(x_scaled) - df_num))
     assert df_err < 1e-13
+
+def test_phi_1():
+    pass
