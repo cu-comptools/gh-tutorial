@@ -4,7 +4,9 @@ import scipy as sp
 
 def Phi(x, y, k = 0.0):
     """
-    What does this function do?
+    Computes the fundamental solution of the Helmholtz equation (if the
+    wavenumber k is not 0) or the Laplace equation in 2D, at position(s) x with
+    source(s) y.
 
 
     Parameters
@@ -12,20 +14,20 @@ def Phi(x, y, k = 0.0):
     x: np.array<float>
         Can have shape (2, n) or (2,). In the latter case, it'll be converted
         to (2, 1).
-        What is this variable? spatial points inside the domain of interest
+
+        Position vector(s) pointing to the target(s).
     y: np.array<float>
         Can have shape (2, m) or (2,). In the latter case, it'll be converted
         to (2, 1).
-        What is this variable? points on boundary of the domain of interest
+        Position vector(s) pointing to the source(s).
     k: float, optional
-        Default k = 0. What is this variable? parameter in the Helmholtz
+        Default k = 0. Wavenumber; if zero then the Laplace fundamental
+        solution will be computed.
 
     Returns
     -------
-    phi: ? 
-
-        What's this variable? What's its shape? np.array<float>, fundamental solution to the Helmholtz equation, evaluated at x,y. it should be n*m x 1, or something like this. 
-
+    phi: np.array<complex<float>> 
+        Has shape (n, m). Array of fundamental solutions for target and source pair(s).
     """
     # Reshape input vectors if given in the shape (2,). Skip if (2, n).
     if x.ndim < 2: 
