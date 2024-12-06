@@ -18,7 +18,7 @@ def Phi(x, y, k = 0.0):
     Returns
     -------
     phi: np.array<float> 
-        Has size mxn. 
+        Has size mxn. Fundemental solution 
     """
     # Reshape input vectors if given in the shape (2,). Skip if (2, n).
     if x.ndim < 2: 
@@ -32,6 +32,6 @@ def Phi(x, y, k = 0.0):
         phi = -1/(2*np.pi)*np.log(np.linalg.norm(d, axis = 0))
     else:
         r = np.linalg.norm(d, axis = 0)
-        phi = 1j/4*sp.hankel1(0, k*r)
+        phi = 1j/4*sp.hankel1(0, k*r) 
     return phi
     
