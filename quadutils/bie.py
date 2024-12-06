@@ -1,27 +1,31 @@
 import numpy as np
-import scipt as sp
+
+import scipy as sp
 
 def Phi(x, y, k = 0.0):
     """
-    What does this function do? Computes the (approximation of the) fundamental solution to the Hemholtz equation  
+    What does this function do?
+
 
     Parameters
     ----------
     x: np.array<float>
         Can have shape (2, n) or (2,). In the latter case, it'll be converted
         to (2, 1).
-        What is this variable? Location in R2 of x
-    y: ?
+        What is this variable? spatial points inside the domain of interest
+    y: np.array<float>
         Can have shape (2, m) or (2,). In the latter case, it'll be converted
         to (2, 1).
-        What is this variable? Location in R2 of the source       
+        What is this variable? points on boundary of the domain of interest
     k: float, optional
-        Default k = 0. What is this variable? Order of approximation
+        Default k = 0. What is this variable? parameter in the Helmholtz
 
     Returns
     -------
     phi: ? 
-        What's this variable? What's its shape? Fundamental solution; scalar
+
+        What's this variable? What's its shape? np.array<float>, fundamental solution to the Helmholtz equation, evaluated at x,y. it should be n*m x 1, or something like this. 
+
     """
     # Reshape input vectors if given in the shape (2,). Skip if (2, n).
     if x.ndim < 2: 
@@ -31,7 +35,8 @@ def Phi(x, y, k = 0.0):
     # Distance vector(s) between pairs of (x, y). 
     # If x is (2, n), and y is (2, m), d will still be of shape (2, n, m).
     d = x[..., None] - y[:, None]
-    # What are these two cases? Order of accuracy
+
+    # What are these two cases?
     if k == 0.0:
         phi = -1/(2*np.pi)*np.log(np.linalg.norm(d, axis = 0))
     else:
