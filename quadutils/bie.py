@@ -13,13 +13,14 @@ def Phi(x, y, k = 0.0):
     y:  Can have shape (2, m) or (2,). In the latter case, it'll be converted
         to (2, 1).
     k: float, optional
-        Default k = 0. What is this variable?
+        Default k = 0. A constant in the fundamental soln
 
     Returns
     -------
     phi: np.array<float> 
-        Has size mxn. 
+        Has size (m,n). The fundamental solution. 
     """
+
     # Reshape input vectors if given in the shape (2,). Skip if (2, n).
     if x.ndim < 2: 
         x = x.reshape((2, -1))#change array so 2 entries and the rest on the other axis
